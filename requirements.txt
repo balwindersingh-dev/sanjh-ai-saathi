@@ -1,12 +1,14 @@
 # Speech-to-text
 faster-whisper
+sounddevice
+numpy
 
-# Local LLM inference
+# Local LLM inference (Phase 2 - not wired in yet, intent_engine.py is the current working brain)
 transformers
 torch
 
 # Text-to-speech
 pyttsx3
 
-# Swap the above for their Qualcomm AI Hub-optimized equivalents
-# once wired up on Snapdragon hardware: https://aihub.qualcomm.com
+# Swap faster-whisper / transformers for their Qualcomm AI Hub-optimized
+# equivalents once running on real Snapdragon hardware: https://aihub.qualcomm.com
