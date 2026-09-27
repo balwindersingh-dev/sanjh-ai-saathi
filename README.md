@@ -24,8 +24,20 @@ Speech In  ->  Understand & Respond  ->  Speech Out
 - **LLM:** quantized Phi-3-mini / Llama-3.2-1B, prompted for Punjabi–Hindi conversation
 - **TTS:** on-device text-to-speech
 
-`app.py` is a starting scaffold — the three pipeline stages are stubbed out
-with clear TODOs for wiring in the actual Qualcomm AI Hub models.
+## Current prototype scope (honest status)
+
+- **Working right now:** `intent_engine.py` — a pure-Python, rule-based
+  intent classifier + response generator, no external dependencies. Covered
+  by `tests/test_intent_engine.py`. Run `python app.py --demo` for a
+  text-only interactive demo of the full conversation loop with no mic,
+  speakers, or extra installs needed.
+- **Written, not yet hardware-tested:** `listen_and_transcribe()` (faster-whisper)
+  and `speak()` (pyttsx3) in `app.py`. They need `pip install -r requirements.txt`
+  and a real mic/speaker to run — not yet verified on physical hardware.
+- **Not yet built (Phase 2, needs real Snapdragon hardware):** replacing the
+  rule-based intent engine with a quantized on-device LLM (Phi-3-mini /
+  Llama-3.2-1B) run via Qualcomm AI Hub on the Snapdragon NPU, plus
+  streaming transcription and voice-activity detection.
 
 ## Roadmap
 
