@@ -1,0 +1,12 @@
+# Speech-to-text
+faster-whisper
+
+# Local LLM inference
+transformers
+torch
+
+# Text-to-speech
+pyttsx3
+
+# Swap the above for their Qualcomm AI Hub-optimized equivalents
+# once wired up on Snapdragon hardware: https://aihub.qualcomm.com
